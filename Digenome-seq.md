@@ -37,7 +37,7 @@
 
           
     **(iii) Filtering Options を設定**  
-    ![](2022-09-07-14-13-57.png)
+    ![](2022-09-07-14-13-57.png)  
         - Minimum mapping quality for bam reads (default 1)  
         - Minimum number of forward reads with same 5' ends (default 5), forward read の 5'末端が一致しているリード数  
         - Minimum number of reverse reads with same 3' ends (default 5), reverse read の 3'末端が一致しているリード数  
@@ -52,12 +52,12 @@
       
         
         - Summary表示にて各染色体ごとにoff-target site候補数を確認できる  
-    ![](2022-09-06-20-31-21.png)
+    ![](2022-09-06-20-31-21.png)  
           Cas9処理サンプルでは off-target 候補 site はトータル85ヶ所  
           Cas9処理サンプルでは chr1 に off-target site の候補が2ヶ所  
             
         - ManhattanプロットやCircosプロットにて視覚化  
-    ![](2022-09-06-20-31-44.png) ![](2022-09-06-20-31-58.png)
+    ![](2022-09-06-20-31-44.png) ![](2022-09-06-20-31-58.png)  
       
         - Result にて詳細を確認  
     ![](2022-09-06-20-32-17.png)  
