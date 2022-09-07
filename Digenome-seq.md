@@ -12,8 +12,8 @@
   * 処理されたゲノムDNAをフラグメント化し、WGS を実施  
   * DSB 誘導後、DSB修復が起きていない -> Cas9 で切断されたサイト(off-target site)がシーケンスされると5'末端が同一のリードが得られる　(viewer でマッピング結果を可視化すると垂直断面が確認される(下図))  
     ![](2022-09-06-20-30-55.png)
-  * 同一5'末端のリードカウントを用いて評価  
-  * 評価基準にDNA cleavage score を採用 (同一末端のリード数が多い場合に高 score となる. 計算式は web page を参照)
+  * 5'末端が同一ポジションのリードを用いて解析  
+  * 上記リードからDNA cleavage score を計算 -> 評価基準に採用 (同一末端のリード数が多い場合に高 score となり、Cas9による切断と判断. 計算式は [web](http://www.rgenome.net/digenome-js/help#example) を参照)  
  ***  
   ### データ解析 [web_tool]
   [web_tool]:http://www.rgenome.net/digenome-js/#!  
@@ -63,5 +63,5 @@
         * 2 Position: off-target 候補 site の位置  
         * 3 Best alignment result: アライメント結果  
         * 4 Cleavage score: DNA cleavage score の計算結果 (推奨値:2.5, 超えるとpositive)  
-        
-
+  
+  
