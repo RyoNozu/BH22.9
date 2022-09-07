@@ -1,11 +1,9 @@
-# オフターゲット効果の評価解析手法　「Digenome-seq」　＆ データ解析　web tool 
+# オフターゲット効果の評価解析手法「Digenome-seq」＆ データ解析web tool  
 ## Digenome-seq ([doi:10.1038/nmeth.3284], [doi:10.1038/s41596-020-00453-6])
 [doi:10.1038/nmeth.3284]:https://doi.org/10.1038/nmeth.3284
 [doi:10.1038/s41596-020-00453-6]:https://doi.org/10.1038/s41596-020-00453-6  
   CRISPR RNA-guided nucleases や deaminases によるゲノム編集時のオフターゲット効果を評価する。  
-***
-  ### 背景  
-  target配列を認識するguide RNA の配列が数塩基のミスマッチを許容することがあるため、off-tagetが発生する。off-targetを評価する解析手法が必要  
+
 ***
   ### コンセプト  
   * ターゲットサイト標的に設計した Cas9 を使い in vitro で (培養細胞から抽出したゲノムDNAに) DNA dobule strand breaks (DSB) を誘導(off-target site も切断)  
@@ -17,26 +15,29 @@
  ***  
   ### データ解析 [web_tool]
   [web_tool]:http://www.rgenome.net/digenome-js/#!  
-  * example data を使用してのtest run  
+  * **example data を使用しての test run**  
     web tool site の an example data のリンクからテスト用のBAM file("WT BAM" & "Cas9 treated BAM") をDL  
      
-    (i) Sequencing Data　のロード  
+    **(i) Sequencing Data　のロード**  
       
+      ![](2022-09-07-14-09-51.png)  
         - Nuclease-treated BAM file & control BAM file をロード  
-        * DL したBAM file をロード
+        1. DL したBAM file をロード  
         - カラムからrefernce genome を選択（ensemblに対応）  
-        * Human (GRCh37) を選択  
+        2. Human (GRCh37) を選択  
           
-    (ii) Nuclease Information を設定  
+            
+    **(ii) Nuclease Information を設定**  
       
+    ![](2022-09-07-14-12-59.png)  
         - DNA切断タイプをカラムから選択  
-        * Blun end を選択(テストデータ用)  
+        1. Blun end を選択(テストデータ用)  
         - ターゲット配列を記入  
-        * 5'-CTTGCCCCACAGGGCAGTAACGG-3' (テストデータ用ターゲット配列)  
+        2. 5'-CTTGCCCCACAGGGCAGTAACGG-3' (テストデータ用ターゲット配列)  
 
           
-    (iii) Filtering Options を設定  
-
+    **(iii) Filtering Options を設定**  
+    ![](2022-09-07-14-13-57.png)
         - Minimum mapping quality for bam reads (default 1)  
         - Minimum number of forward reads with same 5' ends (default 5), forward read の 5'末端が一致しているリード数  
         - Minimum number of reverse reads with same 3' ends (default 5), reverse read の 3'末端が一致しているリード数  
@@ -44,10 +45,12 @@
         - Minimum ratio at each position (default 0.2), (= number of F read w/ same 5' or number of R read w/ same 3' / depth at position) 
         - Minimum cleavage score (default 2.5, recommended)  
           
-        default 設定で実行
+        default 設定で実行  
           
-    (iv) 実行 Run digenome-seq  
+            
+    **(iv) 実行 Run digenome-seq**  
       
+        
         - Summary表示にて各染色体ごとにoff-target site候補数を確認できる  
     ![](2022-09-06-20-31-21.png)
           Cas9処理サンプルでは off-target 候補 site はトータル85ヶ所  
