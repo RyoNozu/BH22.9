@@ -1,4 +1,4 @@
-# オフターゲット効果の評価解析手法「Digenome-seq」＆ データ解析web tool  
+# オフターゲット効果の評価解析「Digenome-seq」＆ データ解析web tool  
 ## Digenome-seq ([doi:10.1038/nmeth.3284], [doi:10.1038/s41596-020-00453-6])
 [doi:10.1038/nmeth.3284]:https://doi.org/10.1038/nmeth.3284
 [doi:10.1038/s41596-020-00453-6]:https://doi.org/10.1038/s41596-020-00453-6  
