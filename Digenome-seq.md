@@ -45,21 +45,21 @@
         - Minimum ratio at each position (default 0.2), (= number of F read w/ same 5' or number of R read w/ same 3' / depth at position) 
         - Minimum cleavage score (default 2.5, recommended)  
           
-        default 設定で実行  
+      default 設定で実行  
           
             
     **(iv) 実行 Run digenome-seq**  
       
         
-        - Summary表示にて各染色体ごとにoff-target site候補数を確認できる  
+      Summary表示にて各染色体ごとにoff-target site候補数を確認できる  
     ![](2022-09-06-20-31-21.png)  
           Cas9処理サンプルでは off-target 候補 site はトータル85ヶ所  
           Cas9処理サンプルでは chr1 に off-target site の候補が2ヶ所  
             
-        - ManhattanプロットやCircosプロットにて視覚化  
+      ManhattanプロットやCircosプロットにて視覚化  
     ![](2022-09-06-20-31-44.png) ![](2022-09-06-20-31-58.png)  
       
-        - Result にて詳細を確認  
+      Result にて詳細を確認  
     ![](2022-09-06-20-32-17.png)  
   
         * 1 Target: ターゲット配列(テスト用：CTTGCCCCACAGGGCAGTAACGG)  
