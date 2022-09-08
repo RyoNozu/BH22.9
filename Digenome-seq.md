@@ -55,8 +55,8 @@
       
       Summary表示にて各染色体ごとにoff-target site候補数を確認できる  
     ![](2022-09-06-20-31-21.png)  
-          Cas9処理サンプルでは off-target 候補 site はトータル85ヶ所  
-          Cas9処理サンプルでは chr1 に off-target site の候補が2ヶ所  
+        - Cas9処理サンプルでは off-target 候補 site はトータル85ヶ所  
+        - Cas9処理サンプルでは chr1 に off-target site の候補が2ヶ所  
             
       ManhattanプロットやCircosプロットにて視覚化  
     ![](2022-09-06-20-31-44.png) ![](2022-09-06-20-31-58.png)  
